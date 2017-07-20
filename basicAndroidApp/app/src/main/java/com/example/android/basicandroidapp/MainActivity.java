@@ -33,8 +33,20 @@ public class MainActivity extends AppCompatActivity {
                 androidAnimation.start();
             }
         };
-        Analytics.trackEvent("Button clicked");
+        Analytics.trackEvent("Animate button clicked");
         btnAnimate.setOnClickListener(ocl);
+
+        final Button btnCrash = (Button) findViewById(R.id.crash);
+        View.OnClickListener lsn;
+        lsn = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Crashes.generateTestCrash();
+                // throw new RuntimeException("This is a crash");
+            }
+        };
+        Analytics.trackEvent("Crash button clicked");
+        btnCrash.setOnClickListener(lsn);
 
     }
 }
