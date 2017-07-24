@@ -5,9 +5,6 @@ dependencies {
     compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
     compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
     androidTestCompile('com.xamarin.testcloud:espresso-support:1.1')
-    task wrapper(type: Wrapper) {
-        gradleVersion = '2.0'
-    }
 }
 
 android {
