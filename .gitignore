@@ -143,3 +143,5 @@ fabric.properties
 google-services.json
 
 !/gradle/wrapper/gradle-wrapper.jar
+
+:app:testReleaseUnitTest 
