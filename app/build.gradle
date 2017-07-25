@@ -11,6 +11,10 @@ dependencies {
 android {
     signingConfigs {
         release {
+            storeFile file('/Users/sherin/Documents/GitHub/basicAndroidApp/app/build/outputs/apk/app-release.apk')
+            storePassword "mobilecenter"
+            keyAlias "t-shshib"
+            keyPassword "mobilecenter"
         }
     }
     compileSdkVersion 26
