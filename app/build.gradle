@@ -10,11 +10,7 @@ dependencies {
 
 android {
     signingConfigs {
-        config {
-            keyAlias 't-shshib'
-            keyPassword 'mobilecenter'
-            storeFile file('/Users/sherin/Documents/GitHub/basicAndroidApp/app/build/keystore.jks')
-            storePassword 'mobilecenter'
+        release {
         }
     }
     compileSdkVersion 26
@@ -31,7 +27,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
         }
     }
 }
